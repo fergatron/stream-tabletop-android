@@ -30,7 +30,7 @@
               </h2>
               <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                    VATSIM has formed a non-profit organization and is now taking donations! Your support helps us improve our services and keep VATSIM growing. Donate now! Have questions? Read our FAQ.
+                    <strong>VATSIM has formed a non-profit organization</strong> and is now taking donations! Your support helps us improve our services and keep VATSIM growing. Donate now! Have questions? Read our FAQ.
                 </div>
               </div>
             </div>
@@ -38,13 +38,11 @@
         <h3>File a Flight Plan</h3>
         <p>Any flight plan you file here will automatically be registered with you when you connect to the network. You will not need to re-file your flight plan when connected.</p>
         <div class="alert alert-warning">This area is currently in <strong>BETA</strong>. Please report any issues on the <a href="#">VATSIM Community Forum</a></div>
-        <div class="row justify-content-end">
-            <div class="col-6">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-primary">Saved Flight Plans</button>
-                    <button type="button" class="btn btn-primary">Flight Plan History</button>
-                    <button type="button" class="btn btn-primary">Import ICAO FPL</button>
-                </div>
+        <div class="d-flex flex-row-reverse">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary">Saved Flight Plans</button>
+                <button type="button" class="btn btn-primary">Flight Plan History</button>
+                <button type="button" class="btn btn-primary">Import ICAO FPL</button>
             </div>
         </div>
         <form class="row g-3" action="">
@@ -52,23 +50,23 @@
                 <div class="card-body">
                     <h4 class="card-title">Aircraft Details</h4>
                     <div class="row g-3">
-                        <div class="col">
+                        <div class="col-md-auto col-sm-12">
                             <label for="callsign" class="form-label">Callsign</label>
                             <input id="callsign" class="form-control" type="text" placeholder="BAW71F">
                         </div>
-                        <div class="col">
+                        <div class="col-md-auto col-sm-12">
                             <label for="aircraftType" class="form-label">Aircraft Type (ICAO)</label>
                             <input id="aircraftType" class="form-control" type="text" placeholder="B744">
                         </div>
-                        <div class="col">
+                        <div class="col-md-auto col-sm-12">
                             <label for="wakeCategory" class="form-label">Wake Category</label>
                             <input id="wakeCategory" class="form-control" type="text">
                         </div>
-                        <div class="col">
+                        <div class="col-md-auto col-sm-12">
                             <label for="equipmentIcao" class="form-label">Equipment (ICAO)</label>
                             <input id="equipmentIcao" class="form-control" type="text" placeholder="SDE3...">
                         </div>
-                        <div class="col">
+                        <div class="col-md-auto col-sm-12">
                             <label for="transponder" class="form-label">Transponder</label>
                             <input id="transponder" class="form-control" type="text" placeholder="L">
                         </div>
@@ -80,7 +78,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Routing Details</h4>
                     <div class="row g-3">
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <div class="form-label">Flight Rules</div>
                             <div class="form-check form-check-inline">
                                 <label for="flightRules1" class="form-check-label">IFR</label>
@@ -91,7 +89,7 @@
                                 <input id="flightRules2" name="flightRules" class="form-check-input" type="radio">
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="voiceRules" class="form-label">Voice Rules</label>
                             <select name="voiceRules" id="voiceRules" class="form-select">
                                 <option value="V">Voice</option>
@@ -99,23 +97,23 @@
                                 <option value="T">Text Only</option>
                             </select>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="flightDate" class="form-label">Date of Flight</label>
                             <input id="flightDate" class="form-control" type="text" placeholder="04/10/2024">
                         </div>
-                        <div class="col-3">
+                        <div class="col-md-3 col-sm-12">
                             <label for="departure" class="form-label">Departure</label>
                             <input id="departure" class="form-control" type="text" placeholder="EGLL">
                         </div>
-                        <div class="col-3">
+                        <div class="col-md-3 col-sm-12">
                             <label for="offblock" class="form-label">Off Block UTC (HHMM)</label>
                             <input id="offblock" class="form-control" type="text" placeholder="1125">
                         </div>
-                        <div class="col-3">
+                        <div class="col-md-3 col-sm-12">
                             <label for="airspeed" class="form-label">Airspeed (knots)</label>
                             <input id="airspeed" class="form-range" type="range" min="90" max="500">
                         </div>
-                        <div class="col-3">
+                        <div class="col-md-3 col-sm-12">
                             <label for="altitude" class="form-label">Altitude (feet)</label>
                             <input id="altitude" class="form-range" type="range" min="1000" max="45000">
                         </div>
@@ -124,19 +122,19 @@
                             <textarea id="route" class="form-control" rows="4"></textarea>
                         </div>
                         <hr>
-                        <div class="col-3">
+                        <div class="col-md-3 col-sm-12">
                             <label for="arrival" class="form-label">Arrival</label>
                             <input id="arrival" class="form-control" type="text" placeholder="KSFO">
                         </div>
-                        <div class="col-3">
+                        <div class="col-md-3 col-sm-12">
                             <label for="enroute" class="form-label">Enroute Time (HHMM)</label>
                             <input id="enroute" class="form-control" type="text" placeholder="1030">
                         </div>
-                        <div class="col-3">
+                        <div class="col-md-3 col-sm-12">
                             <label for="alternate" class="form-label">Alternate</label>
                             <input id="alternate" class="form-control" type="text" placeholder="KLAX">
                         </div>
-                        <div class="col-3">
+                        <div class="col-md-3 col-sm-12">
                             <label for="endurance" class="form-label">Endurance (HHMM)</label>
                             <input id="endurance" class="form-control" type="text" placeholder="1215">
                         </div>
@@ -147,19 +145,19 @@
                 <div class="card-body">
                     <h4 class="card-title">Other Information</h4>
                     <div class="row g-3 my-2">
-                        <div class="col">
+                        <div class="col-md-auto col-sm-12">
                             <label for="callsign" class="form-label">PBN/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col">
+                        <div class="col-md-auto col-sm-12">
                             <label for="callsign" class="form-label">CODE/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col">
+                        <div class="col-md-auto col-sm-12">
                             <label for="callsign" class="form-label">RVR/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col">
+                        <div class="col-md-2 col-sm-12">
                             <label for="callsign" class="form-label">PER/</label>
                             <select name="callsign" id="callsign" class="form-select">
                                 <option value="A">A</option>
@@ -170,45 +168,45 @@
                                 <option value="H">H</option>
                             </select>
                         </div>
-                        <div class="col">
+                        <div class="col-md-auto col-sm-12">
                             <label for="callsign" class="form-label">SEL/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
                     </div>
                     <div class="row g-3 my-2">
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="callsign" class="form-label">NAV/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="callsign" class="form-label">DAT/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="callsign" class="form-label">REG/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="callsign" class="form-label">COM/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="callsign" class="form-label">OPR/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="callsign" class="form-label">SUR/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="callsign" class="form-label">ORGN/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="callsign" class="form-label">RALT/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <label for="callsign" class="form-label">TALT/</label>
                             <input id="callsign" class="form-control" type="text">
                         </div>
@@ -223,8 +221,8 @@
                     </div>
                 </div>    
             </div>
-            <div class="row m-5">
-                <div class="col-6">
+            <div class="row my-5">
+                <div class="col-md-6 col-sm-12">
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-success">File Flight Plan</button>
                         <button type="button" class="btn btn-primary">Save Flight Plan</button>
@@ -235,5 +233,6 @@
             <p><strong>Save Flight Plan</strong> will save your flight plan on myVATSIM, but will not submit it to the network. You can load or delete saved flight plans using the "Saved Flight Plans" option at the top of the page.</p>
         </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
