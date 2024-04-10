@@ -60,13 +60,19 @@
                         </div>
                         <div class="col-md-auto col-sm-12">
                             <label for="wakeCategory" class="form-label">Wake Category</label>
-                            <input id="wakeCategory" class="form-control" type="text">
+                            <select name="wakeCategory" id="wakeCategory" class="form-select">
+                                <option value="">Please Choose</option>
+                                <option value="L">L - Light (MTOW &lt;= 7,000 kg)</option>
+                                <option value="M">M - Medium (MTOW &lt;= 136,000 kg)</option>
+                                <option value="H">H - Heavy</option>
+                                <option value="J">J - Super (A388)</option>
+                            </select>
                         </div>
                         <div class="col-md-auto col-sm-12">
                             <label for="equipmentIcao" class="form-label">Equipment (ICAO)</label>
                             <input id="equipmentIcao" class="form-control" type="text" placeholder="SDE3...">
                         </div>
-                        <div class="col-md-auto col-sm-12">
+                        <div class="col-md-2 col-sm-12">
                             <label for="transponder" class="form-label">Transponder</label>
                             <input id="transponder" class="form-control" type="text" placeholder="L">
                         </div>
