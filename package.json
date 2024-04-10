@@ -1,0 +1,16 @@
+{
+  "name": "stream-tabletop-android",
+  "version": "0.2.0",
+  "description": "This is a static web page used as a catch-all URL dump for the flight simulator personality, tabletop ANDROID.",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Marc Ferguson",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
