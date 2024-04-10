@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File a Flight Plan | myVATSIM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="vatsim.css">
+</head>
+<body>
+    <div class="container">
+        <div class="accordion my-3">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    NOTAM - CTAF Trial
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  <strong>Starting from 1st March - 2024-02-20</strong> The VATSIM United States (VATUSA) division will be trialing real world Common Traffic Advisory Frequency (CTAF) starting March 1st 2024 and lasting up to 6 months.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    VATSIM has formed a non-profit organization
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    VATSIM has formed a non-profit organization and is now taking donations! Your support helps us improve our services and keep VATSIM growing. Donate now! Have questions? Read our FAQ.
+                </div>
+              </div>
+            </div>
+        </div>
+        <h3>File a Flight Plan</h3>
+        <p>Any flight plan you file here will automatically be registered with you when you connect to the network. You will not need to re-file your flight plan when connected.</p>
+        <div class="alert alert-warning">This area is currently in <strong>BETA</strong>. Please report any issues on the <a href="#">VATSIM Community Forum</a></div>
+        <div class="row justify-content-end">
+            <div class="col-6">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary">Saved Flight Plans</button>
+                    <button type="button" class="btn btn-primary">Flight Plan History</button>
+                    <button type="button" class="btn btn-primary">Import ICAO FPL</button>
+                </div>
+            </div>
+        </div>
+        <form class="row g-3" action="">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h4 class="card-title">Aircraft Details</h4>
+                    <div class="row g-3">
+                        <div class="col">
+                            <label for="callsign" class="form-label">Callsign</label>
+                            <input id="callsign" class="form-control" type="text" placeholder="BAW71F">
+                        </div>
+                        <div class="col">
+                            <label for="aircraftType" class="form-label">Aircraft Type (ICAO)</label>
+                            <input id="aircraftType" class="form-control" type="text" placeholder="B744">
+                        </div>
+                        <div class="col">
+                            <label for="wakeCategory" class="form-label">Wake Category</label>
+                            <input id="wakeCategory" class="form-control" type="text">
+                        </div>
+                        <div class="col">
+                            <label for="equipmentIcao" class="form-label">Equipment (ICAO)</label>
+                            <input id="equipmentIcao" class="form-control" type="text" placeholder="SDE3...">
+                        </div>
+                        <div class="col">
+                            <label for="transponder" class="form-label">Transponder</label>
+                            <input id="transponder" class="form-control" type="text" placeholder="L">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h4 class="card-title">Routing Details</h4>
+                    <div class="row g-3">
+                        <div class="col-4">
+                            <div class="form-label">Flight Rules</div>
+                            <div class="form-check form-check-inline">
+                                <label for="flightRules1" class="form-check-label">IFR</label>
+                                <input id="flightRules1" name="flightRules" class="form-check-input" type="radio">
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="flightRules2" class="form-check-label">VFR</label>
+                                <input id="flightRules2" name="flightRules" class="form-check-input" type="radio">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="voiceRules" class="form-label">Voice Rules</label>
+                            <select name="voiceRules" id="voiceRules" class="form-select">
+                                <option value="V">Voice</option>
+                                <option value="R">Receive Voice</option>
+                                <option value="T">Text Only</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label for="flightDate" class="form-label">Date of Flight</label>
+                            <input id="flightDate" class="form-control" type="text" placeholder="04/10/2024">
+                        </div>
+                        <div class="col-3">
+                            <label for="departure" class="form-label">Departure</label>
+                            <input id="departure" class="form-control" type="text" placeholder="EGLL">
+                        </div>
+                        <div class="col-3">
+                            <label for="offblock" class="form-label">Off Block UTC (HHMM)</label>
+                            <input id="offblock" class="form-control" type="text" placeholder="1125">
+                        </div>
+                        <div class="col-3">
+                            <label for="airspeed" class="form-label">Airspeed (knots)</label>
+                            <input id="airspeed" class="form-range" type="range" min="90" max="500">
+                        </div>
+                        <div class="col-3">
+                            <label for="altitude" class="form-label">Altitude (feet)</label>
+                            <input id="altitude" class="form-range" type="range" min="1000" max="45000">
+                        </div>
+                        <div class="col-12">
+                            <label for="route" class="form-label">Route</label>
+                            <textarea id="route" class="form-control" rows="4"></textarea>
+                        </div>
+                        <hr>
+                        <div class="col-3">
+                            <label for="arrival" class="form-label">Arrival</label>
+                            <input id="arrival" class="form-control" type="text" placeholder="KSFO">
+                        </div>
+                        <div class="col-3">
+                            <label for="enroute" class="form-label">Enroute Time (HHMM)</label>
+                            <input id="enroute" class="form-control" type="text" placeholder="1030">
+                        </div>
+                        <div class="col-3">
+                            <label for="alternate" class="form-label">Alternate</label>
+                            <input id="alternate" class="form-control" type="text" placeholder="KLAX">
+                        </div>
+                        <div class="col-3">
+                            <label for="endurance" class="form-label">Endurance (HHMM)</label>
+                            <input id="endurance" class="form-control" type="text" placeholder="1215">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h4 class="card-title">Other Information</h4>
+                    <div class="row g-3 my-2">
+                        <div class="col">
+                            <label for="callsign" class="form-label">PBN/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col">
+                            <label for="callsign" class="form-label">CODE/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col">
+                            <label for="callsign" class="form-label">RVR/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col">
+                            <label for="callsign" class="form-label">PER/</label>
+                            <select name="callsign" id="callsign" class="form-select">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="H">H</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="callsign" class="form-label">SEL/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="row g-3 my-2">
+                        <div class="col-4">
+                            <label for="callsign" class="form-label">NAV/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col-4">
+                            <label for="callsign" class="form-label">DAT/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col-4">
+                            <label for="callsign" class="form-label">REG/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col-4">
+                            <label for="callsign" class="form-label">COM/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col-4">
+                            <label for="callsign" class="form-label">OPR/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col-4">
+                            <label for="callsign" class="form-label">SUR/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col-4">
+                            <label for="callsign" class="form-label">ORGN/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col-4">
+                            <label for="callsign" class="form-label">RALT/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col-4">
+                            <label for="callsign" class="form-label">TALT/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col-12">
+                            <label for="callsign" class="form-label">EET/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                        <div class="col-12">
+                            <label for="callsign" class="form-label">RMK/</label>
+                            <input id="callsign" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="row m-5">
+                <div class="col-6">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-success">File Flight Plan</button>
+                        <button type="button" class="btn btn-primary">Save Flight Plan</button>
+                    </div>
+                </div>
+            </div>
+            <p><strong>File Flight Plan</strong> will submit your flight plan to the network. You can load previously filed flight plans using the "Flight Plan History" option at the top of the page.</p>
+            <p><strong>Save Flight Plan</strong> will save your flight plan on myVATSIM, but will not submit it to the network. You can load or delete saved flight plans using the "Saved Flight Plans" option at the top of the page.</p>
+        </form>
+    </div>
+</body>
+</html>
